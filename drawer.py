@@ -30,7 +30,7 @@ class animator:
 
         return [min(x), max(x), min(y), max(y)]
 
-    def createHistory(self,points=75):
+    def createHistory(self,points=150):
         self.settings.size = self.x_t.shape
         self.settings.historyPoints = points
         self.history = np.zeros(shape = (self.settings.historyPoints, self.settings.size[1]))
