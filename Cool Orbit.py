@@ -4,12 +4,12 @@ import scipy as sp
 import drawer
 
 #Simulation parameters
-tf = 3e7 * 10e2 #years
-t_max = 1e5
+tf = 3e7 * 1e2 #years
+t_max = 5e6
 
 #System parameters
 names = ['Alpha Centauri A','Alpha Centauri B','Proxima Centauri']
-massCoefficient = np.array([10,1,1])
+massCoefficient = np.array([2,1,1])
 solarMass = 1.989e30
 mass = massCoefficient*solarMass
 
@@ -17,9 +17,9 @@ mass = massCoefficient*solarMass
 body1p = np.array([0,1])*1e12
 body1v = np.array([0,0])*1e3
 body2p = np.array([-1,-1])*1e12
-body2v = np.array([-20,10])*1e3
+body2v = np.array([-14,8])*1e3
 body3p = np.array([1,-1])*1e12
-body3v = np.array([-10,-1])*1e3
+body3v = np.array([-10,2])*1e3
 x0 =np.hstack((body1p, body1v, body2p, body2v, body3p, body3v, mass))
 x_t = np.hstack((0,x0))
 

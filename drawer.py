@@ -30,7 +30,7 @@ class animator:
 
         return [min(x), max(x), min(y), max(y)]
 
-    def createHistory(self,points=300):
+    def createHistory(self,points=75):
         self.settings.size = self.x_t.shape
         self.settings.historyPoints = points
         self.history = np.zeros(shape = (self.settings.historyPoints, self.settings.size[1]))
@@ -108,8 +108,8 @@ class animator:
 
             if i==0:
                 history.clear()
-            if i%2 != 0:
-                history.appendleft(self.x_t[step,:])
+            # if i%2 != 0:
+            history.appendleft(self.x_t[step,:])
             line1.set_data(con(step,1), con(step,2))
             line2.set_data(con(step,5), con(step,6))
             line3.set_data(con(step,9), con(step,10))
